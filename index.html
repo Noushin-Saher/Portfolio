@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="pstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Additional styles can be added here if necessary */
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="nav-link" href="#home"><i class="fas fa-user"></i>About Me</a>
+        <a class="nav-link" href="#edu"><i class="fas fa-graduation-cap"></i>Education</a>
+        <a class="nav-link" href="#certify"><i class="fas fa-certificate"></i>Certifications</a>
+        <a class="nav-link" href="#skills"><i class="fas fa-chart-line"></i>Skills</a>
+        <a class="nav-link" href="#project"><i class="fas fa-laptop-code"></i>Projects</a>
+        <a class="nav-link" href="#hackathon"><i class="fa-solid fa-code"></i>Hackathons</a> <!-- Update href to match the section ID -->
+        <a class="nav-link" href="#intern"><i class="fas fa-file-alt"></i>Internships</a>
+        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>Contact Information</a>
+    </div>
+
+    <div id="home" class="section">
+        <div id="aboutContent">
+            <!-- Content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div id="edu" class="section">
+        <!-- Education content will be dynamically inserted here -->
+    </div>
+
+    <div id="certify" class="section">
+        <h2>Certifications</h2>
+    </div>
+
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+    </div>
+
+    <div id="project" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container" id="projects-container"></div>
+    </div>
+
+    <div id="hackathon" class="section"> 
+        <h2>Hackathons</h2>
+        <div class="hackathons-container" id="hackathons-container"></div>
+    </div>
+
+    <div id="intern" class="section">
+        <h2>Internships</h2>
+        <div class="internships-container" id="internships-container"></div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact Information</h2>
+        <div id="contact-container" class="contact-container"></div>
+    </div>
+
+    <script src="aboutme.js"></script>
+    <script src="edu.js"></script>
+    <script src="certify.js"></script>
+    <script src="skills.js"></script>
+    <script src="project.js"></script>
+    <script src="hackathon.js"></script>
+    <script src="intern.js"></script>
+    <script src="contact.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.sidebar .nav-link');
+            const sections = document.querySelectorAll('.section');
+
+            function changeLinkState() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeLinkState();
+            window.addEventListener('scroll', changeLinkState);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    navLinks.forEach(nav => nav.classList.remove('active')); // Remove active class from all links
+                    this.classList.add('active'); // Add active class to the clicked link
+
+                    const targetId = this.getAttribute('href').substring(1); // Get target section id
+                    const targetSection = document.getElementById(targetId); // Get target section element
+                    targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to target section
+                });
+            });
+        });
+    </script>
+</body>
+</html>
