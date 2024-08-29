@@ -378,3 +378,11 @@ html, body {
 .hackathon-item a:hover {
     color: rgb(46, 5, 111);
 }
+
+.highlight {
+    font-weight: bold;
+    color: #007bff; /* Blue color for highlighting, adjust as needed */
+     /* Optional: light background to make the text stand out */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
