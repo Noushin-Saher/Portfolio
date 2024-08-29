@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li class="list-inline-item"><a href="https://www.codechef.com/users/noushin_saher" target="_blank"><i class="fab fa-codechef"></i>Codechef</a></li><br>
                         <li class="list-inline-item"><a href="https://www.hackerrank.com/profile/22b01a05c0" target="_blank"><i class="fab fa-hackerrank"></i>HackerRank</a></li><br>
                         <li class="list-inline-item"><a href="https://codeforces.com/profile/Noushin_Saher" target="_blank"><i class="fab fa-codeforces"></i>Codeforces</a></li><br>
+                        <li class="list-inline-item"><a href="https://medium.com/@mdnausheen864" target="_blank"><i class="fab fa-medium"></i>Medium(Blogs)</a></li><br>
                         <!-- Add more links/icons as needed -->
                     </ul>
                 </div>
