@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 6,
             title: 'Menu Master',
             image: 'food.png',
-            description: 'I am also working on a mini project which is an food ordering application. It facilitates the students and teachers to order food in campus which saves time and effort and once the food is ready they can go collect their food which saves waiting time.'
+            description: 'I have done a mini project which is an food ordering application. It facilitates the students and teachers to order food in campus which saves time and effort and once the food is ready they can go collect their food which saves waiting time. TechStack used is ReactJS, JavaScript, CSS, HTML and for database we used Xampp.'
         },
         {
             id: 1,
